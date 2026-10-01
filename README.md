@@ -27,7 +27,7 @@ cargo run --release -- "#FF0000"
 Output:
 
 ```css
-invert(6%) sepia(11%) saturate(3757%) hue-rotate(360deg) brightness(52%) contrast(111%)
+invert(30%) sepia(46%) saturate(3755%) hue-rotate(342deg) brightness(87%) contrast(134%)
 ```
 
 ### RGB
@@ -39,7 +39,7 @@ cargo run --release -- "rgb(67 221 254)"
 Output:
 
 ```css
-invert(0%) sepia(6%) saturate(519%) hue-rotate(282deg) brightness(38%) contrast(100%)
+invert(66%) sepia(29%) saturate(3752%) hue-rotate(176deg) brightness(117%) contrast(115%)
 ```
 
 ### OKLCH
@@ -51,5 +51,5 @@ cargo run --release -- "oklch(0.8244 0.1652 131.03)"
 Output:
 
 ```css
-invert(0%) sepia(6%) saturate(519%) hue-rotate(282deg) brightness(38%) contrast(100%)
+invert(77%) sepia(41%) saturate(546%) hue-rotate(42deg) brightness(99%) contrast(86%)
 ```
