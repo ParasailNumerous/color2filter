@@ -13,7 +13,7 @@ Code is derived from [whiskers](https://github.com/ozwaldorf/whiskers/blob/9f164
 ## Usage
 
 ```sh
-cargo run --release -- "<css color>"
+cargo run --features="cli" --release "<css color>"
 ```
 
 ## Example
@@ -21,7 +21,7 @@ cargo run --release -- "<css color>"
 ### Hex
 
 ```sh
-cargo run --release -- "#FF0000"
+cargo run --features="cli" --release "#FF0000"
 ```
 
 Output:
@@ -33,7 +33,7 @@ invert(30%) sepia(46%) saturate(3755%) hue-rotate(342deg) brightness(87%) contra
 ### RGB
 
 ```sh
-cargo run --release -- "rgb(67 221 254)"
+cargo run --features="cli" --release "rgb(67 221 254)"
 ```
 
 Output:
@@ -45,7 +45,7 @@ invert(66%) sepia(29%) saturate(3752%) hue-rotate(176deg) brightness(117%) contr
 ### OKLCH
 
 ```sh
-cargo run --release -- "oklch(0.8244 0.1652 131.03)"
+cargo run --features="cli" --release "oklch(0.8244 0.1652 131.03)"
 ```
 
 Output:

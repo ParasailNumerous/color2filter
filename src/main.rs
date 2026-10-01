@@ -1,6 +1,6 @@
-mod css_filter;
-
 use clap::Parser;
+
+use color2filter::color_to_filter;
 
 #[derive(Parser)]
 struct Args {
@@ -10,20 +10,13 @@ struct Args {
 fn main() {
     let args = Args::parse();
     
-    match csscolorparser::parse(&args.color) {
-        Ok(color) => {
-            // r, g, b are between 0-1, multiply by 256
-            let (r, g, b) = (
-                (color.r * 256f32) as u8,
-                (color.g * 256f32) as u8,
-                (color.b * 256f32) as u8
-            );
-            let filter = css_filter::css_filter(r, g, b);
+    match color_to_filter(&args.color) {
+        Ok(filter) => {
             println!("{filter}");
         }
         Err(e) => {
             eprintln!("{e}");
-            std::process::exit(-1)
+            std::process::exit(1)
         }
     }
 }
